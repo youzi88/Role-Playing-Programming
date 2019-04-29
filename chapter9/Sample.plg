@@ -1,0 +1,93 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Sample - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C2.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\WinLib\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Sample.pch" /Yu"StdAfx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\RPGSrc\chapter9\AboutDlg.cpp"
+"E:\RPGSrc\chapter9\Action.cpp"
+"E:\RPGSrc\chapter9\Battle.cpp"
+"E:\RPGSrc\chapter9\Character.cpp"
+"E:\RPGSrc\chapter9\DrawImage.cpp"
+"E:\RPGSrc\chapter9\Effect.cpp"
+"E:\RPGSrc\chapter9\Image.cpp"
+"E:\RPGSrc\chapter9\Lexer.cpp"
+"E:\RPGSrc\chapter9\LoadSave.cpp"
+"E:\RPGSrc\chapter9\MainWin.cpp"
+"E:\RPGSrc\chapter9\Mci.cpp"
+"E:\RPGSrc\chapter9\ParamFile.cpp"
+"E:\RPGSrc\chapter9\Params.cpp"
+"E:\RPGSrc\chapter9\Sample.cpp"
+"E:\RPGSrc\chapter9\Script.cpp"
+"E:\RPGSrc\chapter9\Sprite.cpp"
+"E:\RPGSrc\chapter9\TextReader.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C3.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\WinLib\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Sample.pch" /Yc"StdAfx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\RPGSrc\chapter9\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C3.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Sample.pdb" /debug /machine:I386 /out:"Debug/Sample.exe" /pdbtype:sept /libpath:"..\WinLib\lib" 
+.\Debug\AboutDlg.obj
+.\Debug\Action.obj
+.\Debug\Battle.obj
+.\Debug\Character.obj
+.\Debug\DrawImage.obj
+.\Debug\Effect.obj
+.\Debug\Image.obj
+.\Debug\Lexer.obj
+.\Debug\LoadSave.obj
+.\Debug\MainWin.obj
+.\Debug\Mci.obj
+.\Debug\ParamFile.obj
+.\Debug\Params.obj
+.\Debug\Sample.obj
+.\Debug\Script.obj
+.\Debug\Sprite.obj
+.\Debug\StdAfx.obj
+.\Debug\TextReader.obj
+.\Debug\Sample.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C4.tmp"
+<h3>Output Window</h3>
+Compiling...
+Skipping... (no relevant changes detected)
+StdAfx.cpp
+Compiling...
+Battle.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+AboutDlg.cpp
+Action.cpp
+Character.cpp
+DrawImage.cpp
+Effect.cpp
+Image.cpp
+Lexer.cpp
+LoadSave.cpp
+MainWin.cpp
+Mci.cpp
+ParamFile.cpp
+Params.cpp
+Sample.cpp
+Script.cpp
+Sprite.cpp
+TextReader.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Sample.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

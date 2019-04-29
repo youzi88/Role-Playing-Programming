@@ -1,0 +1,311 @@
+; script范例
+;
+;	Copyright (c) Chihiro.SAKAMOTO (HyperWorks)
+;
+;	script制作　Chihiro Sakamoto
+;	CG制作　    Takashi Miyasaka
+;
+; 这只是说明用的范例，不管怎么选，进行顺序都是map1、map2。
+;
+; 有设计选择条件则是为了说明选择条件。
+;
+
+wipeout					; 清除选单画面
+
+load bg bg001			; 把背景读入到内存
+load ov priest_01		; 把人物读入到内存
+
+fadein					; 显示合成结果
+						; 淡入处理
+text
+「勇者老大，接下来要去哪里？」
+.
+
+
+fadeout					; 清除画面
+
+load bg map				; 读入地图
+load ov witch_02		; 把人物读入到内存
+wipein					; 显示
+
+text
+「这次的工作是消灭山里的怪物吧」
+.
+
+text
+「北山有很多怪物，南山比较少」
+.
+
+text
+「南山山里好像有会让北山怪物自动走避的果实，
+要不要先去南山采果实再去打怪物呢？」
+.
+
+*loop1				; 宣告标签「loop1」
+
+clear ov
+wipein
+
+load work map_hot		; 设定地图范围
+
+*loop2
+
+clear text
+
+click result			; 在点选位置分支
+255 0 0					; 红
+0 255 0					; 绿
+0 0 255					; 蓝
+255 255 0				; 黄
+0 255 255				; 水蓝
+end
+
+if result == 1 goto red
+if result == 2 goto green
+if result == 3 goto blue
+if result == 4 goto yellow
+if result == 5 goto cyan
+
+;
+; 不在地图之内
+;
+*cyan
+
+text
+「你在指哪里？」
+.
+
+text
+「好奇怪的勇者…」
+.
+
+goto loop2
+
+;
+; 海边
+;
+*yellow
+
+text
+「来海边做什么？」
+.
+
+text
+「那是反方向哦…」
+.
+
+goto loop2
+
+;
+; 城镇
+;
+*green
+
+text
+「刚刚才出城门而已」
+.
+
+text
+「忘了带什么东西吗？」
+.
+
+text
+「嗯，也不是那样子啦…」
+.
+
+goto loop2
+
+*red
+
+load ov witch_01		; 把人物读入到内存
+update ov
+
+text
+「喔，这样比较保险吧！」
+.
+
+load ov witch_03		; 把人物读入到内存
+update now
+
+text
+「好像有点丢勇者的脸…」
+.
+
+text
+「既然决定了，那就赶快出发吧！」
+.
+
+goto battle
+
+*blue
+
+load ov priest_03		; 把人物读入到内存
+update ov
+
+text
+「啥米！」
+.
+
+text
+「真的要先去北山吗？」
+.
+
+menu result
+就是北山！
+再考虑看看
+end
+
+if result == 2 goto loop1
+
+load ov priest_01		; 把人物读入到内存
+update now
+
+text
+「要不要再考虑看看」
+.
+
+menu result
+还是走吧
+走走走，Go.Go.Go.
+我就是勇者！
+再考虑看看
+end
+
+if result == 4 goto loop1
+
+load ov priest_02		; 把人物读入到内存
+update now
+
+text
+「真是没办法…」
+.
+
+clear ov
+update wipe
+
+load ov witch_04		; 把人物读入到内存
+update wipe
+
+text
+「真是的…」
+.
+
+mode system				; 设为不可储存
+battle map3				; 没有胜算，会被打败
+
+if battle == 1 goto win1
+
+load ov witch_04		; 把人物读入到内存
+update wipe
+
+text
+「我不是老早就告诉你了吗……」
+.
+
+goto gameover
+
+*win1
+
+load ov priest_03		; 把人物读入到内存
+update wipe
+
+text
+「真是奇迹……」
+.
+
+goto end
+
+;
+; 以下是真正的故事内容
+;
+*battle
+
+mode system				; 设为不可储存
+battle map1				; 第1次战斗
+
+if battle == 0 goto gameover
+
+load ov witch_02		; 把人物读入到内存
+update wipe
+
+text
+「三两下就清洁溜溜喔」
+.
+
+mode scenario			; 设为可储存
+load bg bg001
+load ov priest_01		; 把人物读入到内存
+wipein
+
+text
+「那么，取得果实朝北山出发吧」
+.
+
+fadeout
+
+load bg bg001
+fadein
+
+load ov witch_02
+update over
+
+text
+「去北山啰～」
+.
+
+text
+「好快…」
+.
+
+load ov witch_03
+update now
+
+text
+「还有很多问题的啦」
+.
+
+load ov witch_01
+update now
+
+text
+「等等，好像有敌人」
+.
+
+battle map2				; 第2次战斗
+
+if battle == 0 goto gameover
+
+load bg event			; 若为事件，则将CG读入到BG
+						; 后面均同
+wipein
+
+text
+「太好了～」
+.
+
+text
+「打赢了！」
+.
+
+text
+
+???????HAPPY END
+.
+
+goto end
+
+;
+; 游戏结束
+;
+*gameover
+
+load ov gameover		; 显示GAMEOVER
+update wipe
+
+sound A5_06179			; 游戏结束的音效
+wait 1					; 稍候一会
+
+*end
+
+end
+

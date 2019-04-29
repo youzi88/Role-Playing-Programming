@@ -1,0 +1,38 @@
+; 主选单
+;
+; 设为系统模式
+; 这样就不能储存主选单
+mode system
+
+; 读入标题画面
+load bg title
+wipein
+
+*mainloop
+
+; 显示主选单
+menu result
+新游戏
+继续游戏进度
+游戏结束
+end
+
+if result == 1 goto start		; 新游戏
+if result == 2 goto continue		; 继续游戏进度
+if result == 3 goto end			; 游戏结束
+goto mainloop
+
+
+*start					; 新游戏
+  system clear				; 清除参数
+  exec start				; 读入start.scr
+goto mainloop
+
+*continue				; 继续游戏进度
+  system load				; 开启加载画面
+goto mainloop
+
+*end					; 游戏结束
+  system exit				; 应用软件结束
+goto mainloop
+

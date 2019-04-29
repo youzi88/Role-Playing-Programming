@@ -1,0 +1,67 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Sample - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDD.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\WinLib\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/Sample.pch" /Yu"StdAfx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\AboutDlg.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\Action.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\Battle.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\Character.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\DrawImage.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\Image.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\MainWin.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\Sample.cpp"
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\Sprite.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDD.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\WinLib\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/Sample.pch" /Yc"StdAfx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Fei\Books\铁道游戏\Src_RPG\chapter10\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDF.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Sample.pdb" /machine:I386 /out:"Release/Sample.exe" /libpath:"..\WinLib\lib" 
+".\Release\AboutDlg.obj"
+".\Release\Action.obj"
+".\Release\Battle.obj"
+".\Release\Character.obj"
+".\Release\DrawImage.obj"
+".\Release\Image.obj"
+".\Release\MainWin.obj"
+".\Release\Sample.obj"
+".\Release\Sprite.obj"
+".\Release\StdAfx.obj"
+".\Release\Sample.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDF.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+AboutDlg.cpp
+Action.cpp
+Battle.cpp
+Character.cpp
+DrawImage.cpp
+Image.cpp
+MainWin.cpp
+Sample.cpp
+Sprite.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Sample.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

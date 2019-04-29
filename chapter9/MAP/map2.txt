@@ -1,0 +1,45 @@
+; map data
+
+mapsize 10 10	;地图大小
+mapimage map1	;地图CG
+
+; 伙伴
+player 1 "主公" fighter
+player 2 "魔法师" witch
+player 3 "神官" priest
+
+; 敌人
+enemy 1 "怪物" eye
+enemy 2 "泥巴怪" puyo
+
+; 障碍物
+object 1 "树林" tree2
+
+; 地图初始值
+;
+; ■	禁止出入的地区
+; □	可任意出入
+; 一	player 1
+; 二	player 2
+; 三	player 3
+; 四	player 4
+; １	enemy 1
+; ２	enemy 2
+; ３	enemy 3
+; ４	enemy 4
+; Ⅰ	object 1
+; Ⅱ	object 2
+; Ⅲ	object 3
+;
+map
+□□□□□□□□Ⅰ□
+□□□□ⅠⅠ□２□Ⅰ
+□□□□□□□２□□
+□二□□□□□□１□
+□Ⅰ一□□Ⅰ□□１□
+□三□□□□□□１□
+□□□□□□□□１□
+□□□□ⅠⅠ□２□□
+□□□□□□□２□Ⅰ
+□□□□□□□□Ⅰ□
+

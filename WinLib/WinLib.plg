@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WinLib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Windows\TEMP\RSP4278.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/WinLib.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\Application.cpp"
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\dc.cpp"
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\Dialog.cpp"
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\Dib.cpp"
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\Main.cpp"
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\Misc.cpp"
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\Window.cpp"
+]
+Creating command line "cl.exe @C:\Windows\TEMP\RSP4278.tmp" 
+Creating temporary file "C:\Windows\TEMP\RSP4279.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/WinLib.pch" /Yc /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Administrator\Desktop\Visual C++角色扮演游戏程序设计\Visual C++角色扮演游戏程序设计\WinLib\src\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Windows\TEMP\RSP4279.tmp" 
+Creating command line "link.exe -lib /nologo /out:"lib\WinLib.lib"  ".\Release\Application.obj" ".\Release\dc.obj" ".\Release\Dialog.obj" ".\Release\Dib.obj" ".\Release\Main.obj" ".\Release\Misc.obj" ".\Release\StdAfx.obj" ".\Release\Window.obj" "
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+Application.cpp
+dc.cpp
+Dialog.cpp
+Dib.cpp
+Main.cpp
+Misc.cpp
+Window.cpp
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+WinLib.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

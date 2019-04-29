@@ -1,0 +1,203 @@
+; Sample script
+;
+;	Copyright (c) Chihiro.SAKAMOTO (HyperWorks)
+;
+;	script制作　Chihiro Sakamoto
+;	CG制作　    Takashi Miyasaka
+;
+wipeout				; 画面效果（擦出；wipe out）
+
+load bg bg001			; 设定背景CG
+load ov priest_01		; 设定人物CG
+fadein				; 画面效果（淡入；fade in）
+
+text				; 显示文字叙述（人物台词）
+「这是我们的家务事，别管啦」
+.
+
+
+load ov priest_02		; 将人物设定成其它的CG
+update now				; 变更画面
+
+text
+「为什么，这个人不是让出场人物介绍过了吗？」
+.
+
+clear ov				; 消去人物
+update wipe				; 变更画面
+
+load ov witch_04		; 将人物做成别的CG
+update over				; 变更画面
+
+text
+「这样这说来，就要减少出场次数啰。」
+.
+
+load ov witch_02		; 将人物做成别的CG
+update now			; 变更画面
+
+text
+「就像你看到的，CG把背景和人物各别处理了。」
+.
+
+text
+「使用选项（Menu），透过event让故事产生不同结局（分歧）。」
+.
+
+text
+「就是这种感觉」
+　之前的说明……
+.
+
+;
+; 菜单（Menu）
+;
+menu result
+我再继续
+刚才的小孩好乖！
+end
+
+;
+; 选择菜单（Menu）的结果会加入已经指定好的变量中
+;
+
+if result == 1 goto witch	; 选第1个
+if result == 2 goto priest	; 选第2个
+;
+; 这里没有出现
+;
+*witch
+
+load ov witch_03		; 将人物做成别的CG
+update now			; 变更画面
+
+text
+『我一票………』
+.
+
+load ov witch_02		; 把人物做成别的CG
+update now			; 变更画面
+
+text
+「不同的结局，也可以这样做」
+.
+
+text
+「很简单吧！」
+.
+
+text
+「因为是RPG，战斗是不可缺的吧！」
+.
+
+text
+「在这个系统里，战斗控制也可以从脚本中执行。」
+.
+
+text
+「就像
+　battle map1
+　的指令，就可以转换成战斗。」
+.
+
+text
+「在这里只是单纯的说明并没有战斗，请试试看战斗的画面吧！」
+.
+
+load bg battle_image
+wipein
+
+text
+「战斗画面！」
+.
+
+load ov witch_01		; 将人物做成别的CG
+update wipe			; 变更画面
+
+text
+「战斗结束后又会回到原来的脚本。」
+.
+
+text
+「所以如果输的话，也就是游戏结束……」
+.
+
+load ov gameover		; 游戏结束的文字
+update over			; 变更画面
+
+text
+「像这样子，将文字重迭会有不错的效果。」
+.
+
+text
+「刚好『Game Over』的时候游戏结束。」
+.
+
+goto end
+
+; 底下是菜单第2个的情况
+; 用goto跳过。
+
+*priest
+
+clear ov				; 消除人物
+update wipe				; 变更画面
+
+load ov priest_03		; 将人物做成别的CG
+update over			; 变更画面
+
+text
+『………………………』
+.
+
+load ov priest_01		; 将人物做成别的CG
+update now			; 变更画面
+
+text
+「啊、出场………了………」
+.
+
+load ov priest_02		; 将人物做成别的CG
+update now				; 变更画面
+
+text
+「可能不会再出场了……」
+.
+
+load ov priest_01		; 将人物做成别的CG
+update now				; 变更画面
+
+text
+「...有不同的结局了喔」
+.
+
+text
+「不同结局（分歧）就是用在这种感觉上。」
+.
+
+text
+「如果是游戏的话，我会因此而对游戏增加好感。」
+.
+
+text
+「因为可以使用变量
+　priest_goodwill + 1
+　所以好感度有时会增加、有时会减少。」
+.
+
+text
+「那一个好感度比较高，透过
+　if priest_goodwill > witch_goodwill goto priest_good
+　就可以知道了」
+.
+
+text
+「当然是我的会越来越高啰！」
+
+.
+
+text
+「event的制作方法了解了吗？」
+.
+
+*end
